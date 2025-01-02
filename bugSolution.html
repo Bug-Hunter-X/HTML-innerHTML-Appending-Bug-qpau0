@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Correctly appending content using a DOM manipulation approach
+    const myDiv = document.getElementById("myDiv");
+    const newParagraph1 = document.createElement("p");
+    newParagraph1.textContent = "This text is appended correctly.";
+    myDiv.appendChild(newParagraph1);
+
+    const newParagraph2 = document.createElement("p");
+    newParagraph2.textContent = "This is another correctly appended paragraph.";
+    myDiv.appendChild(newParagraph2);
+  </script>
+</body>
+</html>
