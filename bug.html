@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Incorrectly using innerHTML to set content, overwriting the entire element
+    document.getElementById("myDiv").innerHTML = "<p>This text replaces everything!</p><p>This is another paragraph</p>";
+    document.getElementById("myDiv").innerHTML += "<p>This text will not appear as expected</p>";
+  </script>
+</body>
+</html>
